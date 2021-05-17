@@ -9,7 +9,7 @@
           <div
             class="row w-100 justify-content-start justify-content-xl-between align-items-center"
           >
-            <div class="col-auto d-xxl-none text-center ps-2 pl-2 pe-2 pr-2">
+            <div class="col-auto d-xl-none text-center ps-2 pl-2 pe-2 pr-2">
               <a id="nav-open-btn" href="#" class="toggle-nav nav-toggler h5">
                 <img src="https://i.sig.gg/f/he7i/a.svg" style="width: 28px" />
               </a>

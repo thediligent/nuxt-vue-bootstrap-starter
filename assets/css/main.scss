@@ -113,9 +113,6 @@ a:hover {
 .internal-page-container {
     max-width: 1140px;
 }
-#content-container {
-    margin-top: 44px;
-}
 .page-sidebar {
     position: fixed;
     -webkit-box-flex: 1;
@@ -1006,7 +1003,7 @@ Pricing page
 /*
 Product Page
 */
-.jumbotron:after {
+.jumbotron-shade:after {
     background: rgba(0,0,0,0.68);
     height: 100%;
     width: 100%;
@@ -1122,6 +1119,7 @@ Blogs Page
 .featured-blog-url .featured-blog-image {
     max-width: 100%;
     height:auto;
+    min-height: 40vh;
 }
 @media (min-width: 767.9px) {
     .featured-blog-url .featured-blog-image {
@@ -1129,6 +1127,7 @@ Blogs Page
         max-width: unset;
         max-height:460px;
         height:auto;
+        min-height: 40vh;
         transition: 1.3s;
     }
 }
@@ -1142,6 +1141,7 @@ Blogs Page
             width: 100%;
             max-width: 100%;
             height:auto;
+            min-height: 30vh;
             transition: 1.3s;
         }
         .tags .btn.btn-outline-secondary.btn-sm {
