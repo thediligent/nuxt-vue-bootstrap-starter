@@ -17,20 +17,24 @@
             <div class="col-auto p-0">
               <b-nav-item>
                 <Nuxtlink class="brand" to="/">
-                  <img
-                    src="https://i.sig.gg/f/he44/h.png"
-                    class="align-text-bottom img-fluid d-md-none"
-                    group="Brand"
-                    name="signature-simple"
-                  />
+                  <b-link href="/">
+                    <img
+                      src="https://i.sig.gg/f/he44/h.png"
+                      class="align-text-bottom img-fluid d-md-none"
+                      group="Brand"
+                      name="signature-simple"
+                    />
+                  </b-link>
                 </Nuxtlink>
                 <Nuxtlink class="brand" to="/">
-                  <img
-                    src="https://i.sig.gg/f/hffm/h.png"
-                    class="align-text-bottom img-fluid d-none d-md-inline"
-                    group="Brand"
-                    name="signature-logo-single-line-new"
-                  />
+                  <b-link href="/">
+                    <img
+                      src="https://i.sig.gg/f/hffm/h.png"
+                      class="align-text-bottom img-fluid d-none d-md-inline"
+                      group="Brand"
+                      name="signature-logo-single-line-new"
+                    />
+                  </b-link>
                 </Nuxtlink>
               </b-nav-item>
             </div>
@@ -59,15 +63,22 @@
             </div>
             <div id="megamenu" class="col-lg-auto d-none d-xl-flex ml-auto">
               <b-nav-item class="text-white"
-                ><NuxtLink class="text-white" to="/">Home</NuxtLink>
+                ><NuxtLink class="text-white" to="/pricing">Pricing</NuxtLink>
+              </b-nav-item>
+              <b-nav-item id="productDropdown" class="text-white"
+                >Challenge Coins</b-nav-item
+              >
+              <b-nav-item class="text-white"
+                ><NuxtLink class="text-white" to="#">Gallery</NuxtLink>
               </b-nav-item>
               <b-nav-item
                 ><NuxtLink class="text-white" to="/collection"
-                  >Collection</NuxtLink
+                  >Blog</NuxtLink
                 ></b-nav-item
               >
-              <b-nav-item class="text-white">Another Link</b-nav-item>
-              <b-nav-item class="text-white" disabled>Disabled</b-nav-item>
+              <b-nav-item-dropdown text="Support" right
+                >Support</b-nav-item-dropdown
+              >
             </div>
             <div
               class="col col-md-3 col-lg-auto text-end px-0 mx-0 ps-2 ps-lg-0 pe-lg-2 pl-2 pl-lg-0 pr-lg-2"
@@ -82,13 +93,15 @@
                 href="/freequote"
                 >Get Started
               </a>
-              <Nuxtlink to="#" style="text-decoration: none"
-                ><img
-                  src="https://i.sig.gg/f/heva/a.svg"
-                  style="width: 24px"
-                  class="img-fluid d-none d-lg-inline d-xxl-none mx-2"
-                  alt="cart-white"
-              /></Nuxtlink>
+              <Nuxtlink to="#" style="text-decoration: none">
+                <b-link href="tel:1800-000-0000"
+                  ><img
+                    src="https://i.sig.gg/f/heva/a.svg"
+                    style="width: 24px"
+                    class="img-fluid d-none d-lg-inline d-xxl-none mx-2"
+                    alt="Call us via telephone"
+                  /> </b-link
+              ></Nuxtlink>
               <Nuxtlink to="/cart">
                 <img
                   src="https://i.sig.gg/f/heu7/a.svg"
@@ -96,35 +109,29 @@
                   class="img-fluid d-none d-lg-inline d-xxl-none mx-2"
                   alt="cart-white"
               /></Nuxtlink>
-              <a
-                id="accountDropdown"
-                class="px-0 mx-0 nav-link dropdown-toggle text-white d-none d-xl-inline"
-                style="width: 42px; overflow: hidden"
-                ><img
+              <Nuxtlink to="/accountLink">
+                <img
                   src="https://i.sig.gg/f/hf95/a.svg"
                   class="img-fluid d-none d-xxl-inline mx-2"
                 />
-              </a>
-              <Nuxtlink to="/account"
-                ><img
-                  src="https://i.sig.gg/f/hf95/a.svg"
-                  class="img-fluid d-none d-lg-inline mx-2"
-                  style="width: 24px"
-              /></Nuxtlink>
+              </Nuxtlink>
+              <Nuxtlink to="/accountDrop">
+                <a
+                  id="accountDropdown"
+                  class="px-0 mx-0 nav-link dropdown-toggle text-white d-none d-xl-inline"
+                  style="width: 42px; overflow: hidden"
+                  ><img
+                    src="https://i.sig.gg/f/hf95/a.svg"
+                    class="img-fluid d-lg-inline mx-2"
+                    style="width: 24px" /></a
+              ></Nuxtlink>
             </div>
           </div>
         </div>
-        <div class="position-absolute progress" style="">
-          <div
-            class="rounded-0 progress-bar bg-secondary"
-            role="progressbar"
-            aria-valuenow="50"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
-        </div>
+        <Loadprogress />
       </b-nav>
     </b-navbar>
+    <Megadropdowns />
   </div>
 </template>
 <script>
