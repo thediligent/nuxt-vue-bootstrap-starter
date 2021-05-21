@@ -7,6 +7,11 @@
         method="GET"
         class="text-white px-4 mb-3 position-relative"
       >
+        <img
+          src="https://i.sig.gg/f/hfau/a.svg"
+          alt="search-white"
+          class="me-2 mr-2"
+        />
         <input
           type="text"
           class="form-control"
@@ -15,58 +20,210 @@
         />
       </form>
       <div id="sidebarMenuAccordion" class="accordion accordion-flush">
-        <h2 class="accordion-header no-accordion-header">
-          <a class="accordion-button collapsed button fw-normal"> Pricing </a>
-        </h2>
-        <div class="accordion-item">
-          <h2 id="flush-headingOne" class="accordion-header">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseOne"
-              aria-expanded="false"
-              aria-controls="flush-collapseOne"
+        <b-card no-body>
+          <b-card-header header-tag="header" role="tab">
+            <b-button block class="p-3" variant="link">Pricing</b-button>
+          </b-card-header>
+        </b-card>
+        <div class="accordion" role="tablist">
+          <b-card no-body>
+            <b-card-header header-tag="header" role="tab">
+              <b-button v-b-toggle.accordion-1 block variant="link" class="p-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="d-flex"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  style="height: 24px; width: 24px"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Challenge Coins</b-button
+              >
+            </b-card-header>
+            <b-collapse
+              id="accordion-1"
+              accordion="challenge-coin-accordion"
+              role="tabpanel"
             >
-              Challenge Coins
-            </button>
-          </h2>
-          <div
-            id="flush-collapseOne"
-            class="accordion-collapse collapse"
-            aria-labelledby="flush-headingOne"
-            data-bs-parent="#sidebarMenuAccordion"
-          >
-            <div class="accordion-body p-0 m-0"></div>
-          </div>
-        </div>
-        <h2 class="accordion-header no-accordion-header">
-          <a class="accordion-button collapsed button fw-normal"> Gallery </a>
-        </h2>
-        <h2 class="accordion-header no-accordion-header">
-          <a class="accordion-button collapsed button fw-normal"> Blog </a>
-        </h2>
-        <div class="accordion-item">
-          <h2 id="flush-headingThree" class="accordion-header">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseThree"
-              aria-expanded="false"
-              aria-controls="flush-collapseThree"
+              <b-card-body>
+                <b-card-text class="py-0 pl-0">
+                  <div class="accordion" role="tablist">
+                    <b-card no-body>
+                      <b-card-header header-tag="header" role="tab">
+                        <b-button
+                          v-b-toggle.accordion-cctypes
+                          block
+                          variant="info"
+                          class="p-3 text-white"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="d-flex"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            style="height: 24px; width: 24px"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Coin Types</b-button
+                        >
+                      </b-card-header>
+                      <b-collapse
+                        id="accordion-cctypes"
+                        accordion="types-accordion"
+                        role="tabpanel"
+                      >
+                        <b-card-body>
+                          <b-card-text>3D Challenge Coins</b-card-text>
+                          <b-card-text
+                            >Cut to Shape Challenge Coins</b-card-text
+                          >
+                          <b-card-text>Round Challenge Coins</b-card-text>
+                          <b-card-text>Bottle Openers</b-card-text>
+                          <b-card-text>Spinners</b-card-text>
+                          <b-card-text>Oversized Challenge Coins</b-card-text>
+                          <b-card-text>Multi Tool</b-card-text>
+                          <b-card-text>Golf Ball Markers</b-card-text>
+                          <b-card-text>Dog Tags</b-card-text>
+                        </b-card-body>
+                      </b-collapse>
+                    </b-card>
+
+                    <b-card no-body>
+                      <b-card-header header-tag="header" role="tab">
+                        <b-button
+                          v-b-toggle.accordion-ccuses
+                          block
+                          variant="info"
+                          class="p-3 text-white"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="d-flex"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            style="height: 24px; width: 24px"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                          Coin Uses</b-button
+                        >
+                      </b-card-header>
+                      <b-collapse
+                        id="accordion-ccuses"
+                        accordion="types-accordion"
+                        role="tabpanel"
+                      >
+                        <b-card-body>
+                          <b-card-text>Police Coins</b-card-text>
+                          <b-card-text>Military Challenge Coins</b-card-text>
+                          <b-card-text>Corporate Coins</b-card-text>
+                          <b-card-text
+                            >International Challenge Coins</b-card-text
+                          >
+                          <b-card-text>Firefighter Coins</b-card-text>
+                          <b-card-text>Sports Challenge Coins</b-card-text>
+                          <b-card-text>Entertainment</b-card-text>
+                          <b-card-text>Government Coins</b-card-text>
+                          <b-card-text>Commemorative Coins</b-card-text>
+                          <b-card-text>Clubs and Hobbies</b-card-text>
+                          <b-card-text>Safety Coins</b-card-text>
+                          <b-card-text>School Coins</b-card-text>
+                        </b-card-body>
+                      </b-collapse>
+                    </b-card>
+                  </div>
+                </b-card-text>
+              </b-card-body>
+            </b-collapse>
+          </b-card>
+          <b-card no-body>
+            <b-card-header header-tag="header" role="tab">
+              <b-button v-b-toggle.accordion-2 block variant="link" class="p-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="d-flex"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  style="height: 24px; width: 24px"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Gallery</b-button
+              >
+            </b-card-header>
+            <b-collapse
+              id="accordion-2"
+              accordion="my-accordion"
+              role="tabpanel"
             >
-              Support
-            </button>
-          </h2>
-          <div
-            id="flush-collapseThree"
-            class="accordion-collapse collapse"
-            aria-labelledby="flush-headingThree"
-            data-bs-parent="#sidebarMenuAccordion"
-          >
-            <div class="accordion-body"></div>
-          </div>
+              <b-card-body>
+                <b-card-text>Full Coin Gallery</b-card-text>
+                <b-card-text>Police Coin Gallery</b-card-text>
+                <b-card-text>Military Coin Gallery</b-card-text>
+                <b-card-text>Corporate Gallery</b-card-text>
+                <b-card-text>Charity Coin Gallery</b-card-text>
+              </b-card-body>
+            </b-collapse>
+          </b-card>
+          <b-card no-body>
+            <b-card-header header-tag="header" role="tab">
+              <b-button block class="p-3" variant="link">Blog</b-button>
+            </b-card-header>
+          </b-card>
+          <b-card no-body>
+            <b-card-header header-tag="header" role="tab">
+              <b-button v-b-toggle.accordion-4 block variant="link" class="p-3"
+                >Support</b-button
+              >
+            </b-card-header>
+          </b-card>
+          <b-card no-body>
+            <b-card-header header-tag="header" role="tab">
+              <b-button v-b-toggle.accordion-5 block variant="link" class="p-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="d-flex"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  style="height: 24px; width: 24px"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                Account</b-button
+              >
+            </b-card-header>
+            <b-collapse
+              id="accordion-5"
+              accordion="my-accordion"
+              role="tabpanel"
+            >
+              <b-card-body>
+                <b-card-text>Test Text 1</b-card-text>
+              </b-card-body>
+            </b-collapse>
+          </b-card>
         </div>
       </div>
       <div class="row w-100 mt-4 mb-5 px-3">
@@ -120,7 +277,57 @@
 </template>
 <script></script>
 <style>
-#left-sidebar a {
+#sidebarMenuAccordion .card-body {
+  padding: 0px;
+}
+#sidebarMenuAccordion .card-body p.card-text {
+  padding-left: 40px;
+}
+#sidebarMenuAccordion .collapse {
+  background: rgba(0, 0, 0, 0.25);
+}
+#sidebarMenuAccordion .collapse .collapse {
+  background: rgba(0, 0, 0, 0.2);
+}
+#sidebarMenuAccordion .collapse .card-text {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 0;
+}
+#sidebarMenuAccordion button {
+  border-radius: 0;
+  text-align: left;
+}
+#left-sidebar a,
+#sidebarMenuAccordion .btn-link {
   color: #ffffff;
+}
+#sidebarMenuAccordion .card,
+#sidebarMenuAccordion button,
+.bg-dark .accordion:not(.accordion-flush),
+#sidebarMenuAccordion .accordion > .card > .card-header {
+  background-color: transparent;
+  border: none;
+}
+#sidebar-search-form input {
+  max-width: 21.875rem;
+  height: 2.625rem;
+  line-height: normal;
+  border-radius: 0px;
+  background: 0 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #efefef;
+  box-shadow: none;
+  font-size: 0.9375rem;
+  padding: 0.38rem;
+  padding-left: 28px;
+  background-color: transparent;
+  color: #fff;
+}
+#sidebarMenuAccordion p.card-text {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.accordion .card {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 </style>

@@ -28,9 +28,7 @@
               Some representative placeholder content for the first slide of the
               carousel.
             </p>
-            <p>
-              <a class="btn btn-lg btn-outline-light" href="#">Sign up today</a>
-            </p>
+            <b-button variant="outline-light">Sign Up Today</b-button>
           </div>
         </div>
       </slide>
@@ -42,9 +40,7 @@
               Some representative placeholder content for the first slide of the
               carousel.
             </p>
-            <p>
-              <a class="btn btn-lg btn-outline-light" href="#">Sign up today</a>
-            </p>
+            <b-button variant="outline-light">Sign Up Today</b-button>
           </div>
         </div></slide
       >
