@@ -1,7 +1,6 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#">NavBar</b-navbar-brand>
       <b-nav
         class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top py-2"
       >
@@ -10,7 +9,7 @@
             class="row w-100 justify-content-start justify-content-xl-between align-items-center"
           >
             <div class="col-auto d-xl-none text-center ps-2 pl-2 pe-2 pr-2">
-              <a id="nav-open-btn" href="#" class="toggle-nav nav-toggler h5">
+              <a id="nav-open-btn" class="toggle-nav nav-toggler h5">
                 <img src="https://i.sig.gg/f/he7i/a.svg" style="width: 28px" />
               </a>
             </div>
@@ -76,9 +75,7 @@
                   >Blog</NuxtLink
                 ></b-nav-item
               >
-              <b-nav-item-dropdown text="Support" right
-                >Support</b-nav-item-dropdown
-              >
+              <b-nav-item id="" class="dropdown">Support</b-nav-item>
             </div>
             <div
               class="col col-md-3 col-lg-auto text-end px-0 mx-0 ps-2 ps-lg-0 pe-lg-2 pl-2 pl-lg-0 pr-lg-2"
@@ -115,16 +112,15 @@
                   class="img-fluid d-none d-xxl-inline mx-2"
                 />
               </Nuxtlink>
-              <Nuxtlink to="/accountDrop">
-                <a
-                  id="accountDropdown"
-                  class="px-0 mx-0 nav-link dropdown-toggle text-white d-none d-xl-inline"
-                  style="width: 42px; overflow: hidden"
-                  ><img
-                    src="https://i.sig.gg/f/hf95/a.svg"
-                    class="img-fluid d-lg-inline mx-2"
-                    style="width: 24px" /></a
-              ></Nuxtlink>
+              <a
+                id="accountDropdown"
+                class="px-0 mx-0 nav-link dropdown-toggle text-white d-none d-xl-inline"
+                style="width: 42px; overflow: hidden"
+                ><img
+                  src="https://i.sig.gg/f/hf95/a.svg"
+                  class="img-fluid d-lg-inline mx-2"
+                  style="width: 24px"
+              /></a>
             </div>
           </div>
         </div>
@@ -134,27 +130,4 @@
     <Megadropdowns />
   </div>
 </template>
-<script>
-// import { Directus } from '@directus/sdk'
-// import axios from "axios"
-// const directus = "http://localhost:8055/graphql"
-// export default {
-//     axios({
-//     url: directus,
-//     method: "post",
-//     data: {
-//     query: `
-//         {
-//             support_item{
-//                 title
-//             }
-//         }
-//     `,
-//     },
-//     }).then((res) => {
-//         console.log(res.data.data.allUsers)
-//     }).catch((err) => {
-//        console.log(err.message)
-//     })
-//   }
-</script>
+<script></script>

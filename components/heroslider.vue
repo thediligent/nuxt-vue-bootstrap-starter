@@ -1,11 +1,11 @@
 <template>
   <div>
     <hooper
-      :infiniteScroll="true"
+      :infinite-scroll="true"
       :progress="true"
-      :wheelControl="false"
-      :autoPlay="true"
-      :playSpeed="5000"
+      :wheel-control="false"
+      :auto-play="true"
+      :play-speed="5000"
       class="heroslider"
     >
       <slide
@@ -69,7 +69,7 @@
 import { Hooper, Slide, Pagination as HooperPagination } from 'hooper'
 import 'hooper/dist/hooper.css'
 export default {
-  name: 'heroslider',
+  name: 'HeroSlider',
   components: {
     Hooper,
     Slide,
@@ -106,5 +106,9 @@ export default {
   position: absolute;
   text-align: right;
   width: 100%;
+}
+.heroslider {
+  min-height: 45vh;
+  margin-top: 40px;
 }
 </style>

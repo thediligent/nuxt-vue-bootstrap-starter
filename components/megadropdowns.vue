@@ -11,14 +11,14 @@
           class="col-12 col-lg-3 px-0 pb-0 mb-0 ps-3"
         >
           <div
-            class="nav flex-column nav-pills h-100 mb-0"
             id="v-pills-tab"
+            class="nav flex-column nav-pills h-100 mb-0"
             role="tablist"
             aria-orientation="vertical"
           >
             <a
-              class="nav-link bg-light text-dark rounded-0 border-right active"
               id="v-pills-uses-tab"
+              class="nav-link bg-light text-dark rounded-0 border-right active"
               data-bs-toggle="pill"
               href="#v-pills-uses"
               role="tab"
@@ -33,8 +33,8 @@
               >
             </a>
             <a
-              class="nav-link bg-light text-dark rounded-0 border-right"
               id="v-pills-features-tab"
+              class="nav-link bg-light text-dark rounded-0 border-right"
               data-bs-toggle="pill"
               href="#v-pills-features"
               role="tab"
@@ -49,8 +49,8 @@
               >
             </a>
             <a
-              class="nav-link bg-light text-dark rounded-0 border-right"
               id="v-pills-stock-coins-tab"
+              class="nav-link bg-light text-dark rounded-0 border-right"
               data-bs-toggle="pill"
               href="#v-pills-stock-coins"
               role="tab"
@@ -67,10 +67,10 @@
           </div>
         </div>
         <div class="col-12 col-lg-9 ps-0 pt-2">
-          <div class="tab-content" id="v-pills-tabContent">
+          <div id="v-pills-tabContent" class="tab-content">
             <div
-              class="tab-pane fade active show"
               id="v-pills-uses"
+              class="tab-pane fade active show"
               role="tabpanel"
               aria-labelledby="v-pills-uses-tab"
             >
@@ -464,8 +464,8 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
               id="v-pills-features"
+              class="tab-pane fade"
               role="tabpanel"
               aria-labelledby="v-pills-features-tab"
             >
@@ -687,8 +687,8 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
               id="v-pills-stock-coins"
+              class="tab-pane fade"
               role="tabpanel"
               aria-labelledby="v-pills-stock-coins-tab"
             >
@@ -1066,8 +1066,8 @@
               </div>
             </div>
             <div
-              class="col-12 col-lg-5 px-1 text-center text-md-start"
               id="retrieve-quote"
+              class="col-12 col-lg-5 px-1 text-center text-md-start"
             >
               <div class="row">
                 <div class="col-3 align-self-center text-center">

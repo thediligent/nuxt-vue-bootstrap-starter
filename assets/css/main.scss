@@ -235,16 +235,16 @@ a:hover {
     top: 14px;
 }
 
-[data-theme="dark"] .accordion:not(.accordion-flush) { border-top: 1px solid #333; border-top-left-radius: 0.25rem !important; border-top-right-radius: 0.25rem !important; }
-[data-theme="dark"] .accordion-button { color: #fff; background-color: transparent; border: 1px solid rgba(255,255,255,.12); border-top: none; }
-[data-theme="dark"] .accordion-button:not(.collapsed) { color: #fff; background-color:rgba(0,0,0,.2); border-bottom: none; }
-[data-theme="dark"] .accordion-collapse { border: 1px solid rgba(255,255,255,.12); }
+.bg-dark .accordion:not(.accordion-flush) { border-top: 1px solid #333; border-top-left-radius: 0.25rem !important; border-top-right-radius: 0.25rem !important; }
+.bg-dark .accordion-button { color: #fff; background-color: transparent; border: 1px solid rgba(255,255,255,.12); border-top: none; }
+.bg-dark .accordion-button:not(.collapsed) { color: #fff; background-color:rgba(0,0,0,.2); border-bottom: none; }
+.bg-dark .accordion-collapse { border: 1px solid rgba(255,255,255,.12); }
 
-[data-theme="dark"] .accordion-flush .accordion-button { border-right: 0; border-left: 0; border-radius: 0; }
-[data-theme="dark"] .accordion-flush .accordion-collapse { border-width: 0; }
-[data-theme="dark"] .accordion-flush .accordion-item:first-of-type .accordion-button { border-top-width: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
-[data-theme="dark"] .accordion-flush .accordion-item:last-of-type .accordion-button.collapsed { border-bottom-width: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; }
-[data-theme="dark"] .accordion-button::after { filter: invert(1) grayscale(100%) brightness(200%); }
+.bg-dark .accordion-flush .accordion-button { border-right: 0; border-left: 0; border-radius: 0; }
+.bg-dark .accordion-flush .accordion-collapse { border-width: 0; }
+.bg-dark .accordion-flush .accordion-item:first-of-type .accordion-button { border-top-width: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
+.bg-dark .accordion-flush .accordion-item:last-of-type .accordion-button.collapsed { border-bottom-width: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; }
+.bg-dark .accordion-button::after { filter: invert(1) grayscale(100%) brightness(200%); }
 
 /*
 ////// Navigation Styles 

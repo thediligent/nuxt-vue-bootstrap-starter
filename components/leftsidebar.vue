@@ -118,27 +118,9 @@
     </div>
   </div>
 </template>
-<script>
-// import { Directus } from '@directus/sdk'
-// import axios from "axios"
-// const directus = "http://localhost:8055/graphql"
-// export default {
-//     axios({
-//     url: directus,
-//     method: "post",
-//     data: {
-//     query: `
-//         {
-//             support_item{
-//                 title
-//             }
-//         }
-//     `,
-//     },
-//     }).then((res) => {
-//         console.log(res.data.data.allUsers)
-//     }).catch((err) => {
-//        console.log(err.message)
-//     })
-//   }
-</script>
+<script></script>
+<style>
+#left-sidebar a {
+  color: #ffffff;
+}
+</style>

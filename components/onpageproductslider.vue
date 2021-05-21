@@ -2,12 +2,12 @@
   <div style="background: transparent">
     <hooper
       group="products"
-      :shortDrag="true"
-      :itemsToShow="currentItemsToShow"
-      :initialSlide="0"
-      :wheelControl="false"
-      :centerMode="false"
-      :infiniteScroll="true"
+      :short-drag="false"
+      :items-to-show="currentItemsToShow"
+      :initial-slide="0"
+      :wheel-control="false"
+      :center-mode="true"
+      :infinite-scroll="true"
       class="productslider"
     >
       <slide class="col-6 col-md-3 col-xl-2">
@@ -85,7 +85,7 @@
 import { Hooper, Slide } from 'hooper'
 import 'hooper/dist/hooper.css'
 export default {
-  name: 'productslider',
+  name: 'OnPageProductSlider',
   components: {
     Hooper,
     Slide,
@@ -100,6 +100,7 @@ export default {
       this.$refs.carousel.slideTo(this.carouselData)
     },
   },
+  mounted() {},
   methods: {
     slidePrev() {
       this.$refs.carousel.slidePrev()
@@ -111,7 +112,6 @@ export default {
       this.myCarouselData = payload.currentSlide
     },
   },
-  mounted() {},
 }
 </script>
 <style>
