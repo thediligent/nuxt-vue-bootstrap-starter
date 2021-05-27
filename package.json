@@ -19,6 +19,7 @@
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
     "hooper": "^0.3.4",
+    "masonry-layout": "^4.2.2",
     "nuxt": "^2.2.0"
   },
   "devDependencies": {

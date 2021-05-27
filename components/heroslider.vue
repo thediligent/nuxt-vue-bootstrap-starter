@@ -105,6 +105,6 @@ export default {
 }
 .heroslider {
   min-height: 45vh;
-  margin-top: 40px;
+  margin-top: 16px;
 }
 </style>

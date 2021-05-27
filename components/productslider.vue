@@ -92,7 +92,7 @@ export default {
   },
   data() {
     return {
-      currentItemsToShow: 6,
+      currentItemsToShow: 4,
     }
   },
   watch: {

@@ -866,10 +866,10 @@
       aria-labelledby="supportDropdown"
     >
       <div class="row">
-        <div class="col-12 pt-3 mb-0">
+        <div class="col-12 py-3 mb-0">
           <div class="row">
             <div id="support-tab" class="col-12 col-lg-7">
-              <ul class="ps-4 list-unstyled">
+              <ul class="ps-4 pl-4 list-unstyled">
                 <li class="py-1">
                   <strong
                     ><a class="text-primary p font-weight-bold" href="#"
@@ -935,7 +935,7 @@
                 </li>
               </ul>
               <span
-                class="collection-link ms-4 small text-primary d-inline-block"
+                class="collection-link ms-4 ml-4 small text-primary d-inline-block"
                 data-href="/support"
                 >➝ View Support Section</span
               >

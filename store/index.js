@@ -1,9 +1,12 @@
-export const actions = {
-  async getPosts() {
-    const res = await this.$axios.get(
-      'http://localhost:8055/items/blog_post/?filter[status][_eq]=published&fields=title,excerpt,url,main_image'
-    )
-    return res
+export default {
+  state: () => ({
+    loading: false,
+  }),
+  mutations: {
+    SET_DATA(state, { id, data }) {
+      state[id] = data
+    },
   },
+  actions: {},
 }
 export const strict = false

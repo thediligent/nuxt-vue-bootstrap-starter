@@ -14,28 +14,27 @@
               </a>
             </div>
             <div class="col-auto p-0">
-              <b-nav-item>
-                <Nuxtlink class="brand" to="/">
-                  <b-link href="/">
-                    <img
-                      src="https://i.sig.gg/f/he44/h.png"
-                      class="align-text-bottom img-fluid d-md-none"
-                      group="Brand"
-                      name="signature-simple"
-                    />
-                  </b-link>
-                </Nuxtlink>
-                <Nuxtlink class="brand" to="/">
-                  <b-link href="/">
-                    <img
-                      src="https://i.sig.gg/f/hffm/h.png"
-                      class="align-text-bottom img-fluid d-none d-md-inline"
-                      group="Brand"
-                      name="signature-logo-single-line-new"
-                    />
-                  </b-link>
-                </Nuxtlink>
+              <b-nav-item class="p-0 m-0 text-white d-md-none" to="/">
+                <img
+                  src="https://i.sig.gg/f/he44/h.png"
+                  class="align-text-bottom img-fluid"
+                  group="Brand"
+                  name="signature-simple"
+                />
               </b-nav-item>
+              <Nuxtlink class="brand" to="/">
+                <b-nav-item
+                  class="p-0 m-0 text-white d-none d-md-inline"
+                  to="/"
+                >
+                  <img
+                    src="https://i.sig.gg/f/hffm/h.png"
+                    class="align-text-bottom img-fluid"
+                    group="Brand"
+                    name="signature-logo-single-line-new"
+                  />
+                </b-nav-item>
+              </Nuxtlink>
             </div>
             <div
               class="nav-search-col col d-none d-md-flex align-items-center ps-0 pl-0"
@@ -64,11 +63,9 @@
               <b-nav-item class="text-white"
                 ><NuxtLink class="text-white" to="/pricing">Pricing</NuxtLink>
               </b-nav-item>
-              <b-nav-item id="productDropdown" class="text-white"
-                >Challenge Coins</b-nav-item
-              >
+              <b-nav-item class="text-white">Challenge Coins</b-nav-item>
               <b-nav-item class="text-white"
-                ><NuxtLink class="text-white" to="#">Gallery</NuxtLink>
+                ><NuxtLink class="text-white" to="/gallery">Gallery</NuxtLink>
               </b-nav-item>
               <b-nav-item
                 ><NuxtLink class="text-white" to="/collection"
@@ -78,12 +75,13 @@
               <b-nav-item id="" class="dropdown">Support</b-nav-item>
             </div>
             <div
-              class="col col-md-3 col-lg-auto text-end px-0 mx-0 ps-2 ps-lg-0 pe-lg-2 pl-2 pl-lg-0 pr-lg-2"
+              class="col col-md-3 col-lg-auto text-end text-right px-0 mx-0 ps-2 ps-lg-0 pe-lg-2 pl-2 pl-lg-0 pr-2"
             >
-              <a
+              <NuxtLink
                 class="btn btn-secondary text-white d-none d-md-inline"
+                to="/freequote"
                 href="/freequote"
-                >Get Started</a
+                >Get Started</NuxtLink
               >
               <a
                 class="btn btn-secondary btn-sm text-white d-inline d-md-none"
@@ -131,3 +129,4 @@
   </div>
 </template>
 <script></script>
+<style></style>
