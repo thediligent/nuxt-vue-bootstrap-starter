@@ -9,9 +9,13 @@
             class="row w-100 justify-content-start justify-content-xl-between align-items-center"
           >
             <div class="col-auto d-xl-none text-center ps-2 pl-2 pe-2 pr-2">
-              <a id="nav-open-btn" class="toggle-nav nav-toggler h5">
+              <b-link
+                id="nav-open-btn"
+                @click="showMenu = !showMenu"
+                class="toggle-nav nav-toggler h5"
+              >
                 <img src="https://i.sig.gg/f/he7i/a.svg" style="width: 28px" />
-              </a>
+              </b-link>
             </div>
             <div class="col-auto p-0">
               <b-nav-item class="p-0 m-0 text-white d-md-none" to="/">
@@ -128,5 +132,18 @@
     <Megadropdowns />
   </div>
 </template>
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      showMenu: false,
+    }
+  },
+  computed: {
+    mobileMenu() {
+      return this.showMenu ? 'left-sidebar-open' : ''
+    },
+  },
+}
+</script>
 <style></style>

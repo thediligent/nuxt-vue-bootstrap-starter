@@ -6,7 +6,7 @@
       :items-to-show="currentItemsToShow"
       :initial-slide="0"
       :wheel-control="false"
-      :center-mode="true"
+      :center-mode="false"
       :infinite-scroll="true"
       class="productslider"
     >
@@ -92,7 +92,7 @@ export default {
   },
   data() {
     return {
-      currentItemsToShow: 4,
+      currentItemsToShow: 6,
     }
   },
   watch: {

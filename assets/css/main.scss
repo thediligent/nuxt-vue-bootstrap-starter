@@ -185,8 +185,8 @@ a:hover {
   transition: all 300ms;
   background: rgba(0, 0, 0, 0);
 }
-.page-inner.left-sidebar-open .overlay,
-.page-inner.right-sidebar-open .overlay {
+.page-inner.leftsidebaropen .overlay,
+.page-inner.rightsidebaropen .overlay {
   display: block;
   position: fixed;
   left: 0;
@@ -196,6 +196,11 @@ a:hover {
   width: 100%;
   z-index: 4;
   background: rgba(0, 0, 0, 0.85);
+}
+.spinner-border {
+  border-left-color: #f58518;
+  border-top-color: #f58518;
+  border-bottom-color: #f58518;
 }
 @media (min-width: 768px) {
   #left-sidebar {
@@ -208,11 +213,11 @@ a:hover {
     width: 40vw;
     max-width: 40vw;
   }
-  .left-sidebar-open #content-container {
+  .leftsidebaropen #content-container {
     left: 40vw;
     position: fixed;
   }
-  .right-sidebar-open #content-container {
+  .rightsidebaropen #content-container {
     right: 40vw;
     position: fixed;
   }

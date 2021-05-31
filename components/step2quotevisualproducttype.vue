@@ -13,7 +13,7 @@
           <p class="card-text">
             {{ product.description }}
           </p>
-          <a @click="loading = !loading" class="link"> Go somewhere </a>
+          <a class="link" @click="loading = !loading"> Go somewhere </a>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
   <div>
     <megamenu />
     <div class="page-wrapper d-block w-100 bg-light">
-      <div class="page-inner">
+      <div :class="mobileMenu" class="page-inner">
         <div id="left-sidebar" class="bg-dark page-sidebar h-100">
           <leftsidebar />
         </div>
@@ -18,4 +18,17 @@
     </div>
   </div>
 </template>
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      showMenu: false,
+    }
+  },
+  computed: {
+    mobileMenu() {
+      return this.showMenu ? 'left-sidebar-open' : ''
+    },
+  },
+}
+</script>

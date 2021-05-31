@@ -84,12 +84,12 @@
           class="d-inline mx-sm-auto"
           style="min-width: 220px"
         >
-          <artwork-group-image
+          <img
             group="Page Images"
             name="ups-logo"
             class="d-inline me-1"
             style="vertical-align: top"
-          ></artwork-group-image>
+          />
           <p
             class="small font-weight-bold d-inline-block"
             style="min-width: 120px"
@@ -123,20 +123,20 @@
                 alt="Signature Promotional Group LLC, Pins  Lapel, Altamonte Springs, FL"
               />
             </a>
-            <artwork-group-image
+            <img
               class="d-inline m-2 img-fluid lazyload"
               group="Trusted Logo"
               name="d-b-credibility"
-            ></artwork-group-image>
+            />
           </div>
         </div>
         <span id="acceptedpayments" class="navbar-text mx-sm-auto">
           <h6 class="d-inline pr-2 font-weight-bold">We Gladly Accept</h6>
-          <artwork-group-image
+          <img
             group="Page Images"
             name="payment-methods-accepted"
             class="img-fluid d-inline lazyload"
-          ></artwork-group-image>
+          />
         </span>
       </div>
     </nav>

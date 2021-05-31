@@ -87,7 +87,6 @@
     </div>
     <div class="form-group">
       <label for="date">What date do you need these by?</label>
-      <!-- <input id="date" type="date" placeholder="Select a date (Optional)" class="form-control"> -->
       <b-form-datepicker
         id="date"
         v-model="value"
@@ -116,6 +115,6 @@
   </form>
 </template>
 <script>
-export default {}
+// export default {}
 </script>
 <style></style>

@@ -22,7 +22,7 @@
             <p class="card-text">
               {{ portfolio_item.product_description }}
             </p>
-            <a @click="loading = !loading" class="link"> Go somewhere </a>
+            <a class="link" @click="loading = !loading"> Go somewhere </a>
           </div>
         </div>
       </div>

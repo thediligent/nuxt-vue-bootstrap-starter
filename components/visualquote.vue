@@ -6,7 +6,8 @@
           What kind of product are you looking for?
         </h2>
         <quotehorizontalsteps />
-        <quotevisualproducts />
+        <step1quotevisualproducts />
+        <step2quotevisualproducttype />
         <quotecontactform />
       </div>
       <div id="summary-bar" class="col-3 pb-5 px-0 d-none d-md-block">
@@ -22,7 +23,13 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      show: true,
+    }
+  },
+}
 </script>
 <style>
 #summary-bar {

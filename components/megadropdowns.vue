@@ -950,11 +950,11 @@
                   </strong>
                   <div class="card">
                     <span class="w-100">
-                      <artwork-group-image
+                      <img
                         class="card-img img-fluid"
                         group="V4 Megamenu Images"
                         name="Referral Program"
-                      ></artwork-group-image>
+                      />
                     </span>
                   </div>
                 </div>
@@ -966,11 +966,11 @@
                   </strong>
                   <div class="card">
                     <span class="w-100">
-                      <artwork-group-image
+                      <img
                         class="card-img img-fluid"
                         group="V4 Megamenu Images"
                         name="Referral Program"
-                      ></artwork-group-image>
+                      />
                     </span>
                   </div>
                 </div>
@@ -983,11 +983,11 @@
                   </strong>
                   <div class="card">
                     <span class="w-100">
-                      <artwork-group-image
+                      <img
                         class="card-img img-fluid"
                         group="V4 Megamenu Images"
                         name="Referral Program"
-                      ></artwork-group-image>
+                      />
                     </span>
                   </div>
                 </div>
@@ -999,11 +999,11 @@
                   </strong>
                   <div class="card">
                     <span class="w-100">
-                      <artwork-group-image
+                      <img
                         class="card-img img-fluid"
                         group="V4 Megamenu Images"
                         name="Referral Program"
-                      ></artwork-group-image>
+                      />
                     </span>
                   </div>
                 </div>
