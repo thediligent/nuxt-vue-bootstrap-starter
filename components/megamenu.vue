@@ -77,7 +77,11 @@
                   >Blog</NuxtLink
                 ></b-nav-item
               >
-              <b-nav-item id="" class="dropdown">Support</b-nav-item>
+              <b-nav-item
+                ><NuxtLink class="text-white" to="/formulate"
+                  >Forms</NuxtLink
+                ></b-nav-item
+              >
             </div>
             <div
               class="col col-md-4 col-lg-auto text-end text-right px-0 mx-0 ps-2 ps-lg-0 pe-lg-2 pl-2 pl-lg-0 pr-2"
@@ -119,20 +123,22 @@
               </Nuxtlink>
               <b-dropdown
                 id="dropdown-form"
-                text=""
                 ref="dropdown"
                 right
-                class="m-2 d-none d-lg-inline"
+                variant="link"
+                class="m-2 d-none d-lg-inline text-white"
               >
-                <a
-                  id="accountDropdownSmall"
-                  class="px-0 mx-0 nav-link dropdown-toggle text-white d-none d-lg-inline d-xl-none"
-                  style="width: 42px; overflow: hidden"
-                  ><img
-                    src="https://i.sig.gg/f/hf95/a.svg"
-                    class="img-fluid d-lg-inline mx-2"
-                    style="width: 24px"
-                /></a>
+                <template #button-content>
+                  <span
+                    id="accountDropdownSmall"
+                    class="px-0 mx-0 nav-link text-white d-none d-lg-inline"
+                    style="width: 42px; overflow: hidden"
+                    ><img
+                      src="https://i.sig.gg/f/hf95/a.svg"
+                      class="img-fluid d-lg-inline mx-2"
+                      style="width: 24px"
+                  /></span>
+                </template>
                 <b-dropdown-form>
                   <b-form-group
                     label="Email"
@@ -171,17 +177,6 @@
                   >Forgot Password?</b-dropdown-item-button
                 >
               </b-dropdown>
-              <Nuxtlink to="/accountLink">
-                <a
-                  id="accountDropdownLarge"
-                  class="px-0 mx-0 nav-link dropdown-toggle text-white d-none d-xl-inline"
-                  style="width: 42px; overflow: hidden"
-                  ><img
-                    src="https://i.sig.gg/f/hf95/a.svg"
-                    class="img-fluid d-lg-inline mx-2"
-                    style="width: 24px"
-                /></a>
-              </Nuxtlink>
             </div>
           </div>
         </div>

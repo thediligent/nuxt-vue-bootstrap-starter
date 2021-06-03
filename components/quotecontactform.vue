@@ -2,23 +2,21 @@
   <form class="helen-quote-form p-2">
     <h3>Contact Info</h3>
     <div class="form-group">
-      <input
-        id="email"
+      <FormulateInput
         type="email"
-        placeholder="Email Address"
-        autocomplete="email"
-        required
-        class="form-control"
+        label="Email Address"
+        placeholder="Email"
+        name="email"
+        validation="required|email"
       />
     </div>
     <div class="form-group">
-      <input
-        id="phone"
+      <FormulateInput
         type="tel"
-        placeholder="Phone number"
-        autocomplete="tel"
-        required
-        class="form-control"
+        label="Phone Number"
+        placeholder="Phone Number"
+        name="phone"
+        help="Enter a valid phone number for SMS."
       />
     </div>
     <div class="form-group">

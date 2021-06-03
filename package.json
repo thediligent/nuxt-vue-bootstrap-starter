@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@braid/vue-formulate": "^2.5.2",
     "@directus/sdk": "*",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/pwa": "^3.0.2",

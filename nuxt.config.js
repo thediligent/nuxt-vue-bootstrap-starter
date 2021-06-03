@@ -28,6 +28,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     '@nuxtjs/device',
+    '@braid/vue-formulate/nuxt',
   ],
   device: {
     refreshOnResize: true

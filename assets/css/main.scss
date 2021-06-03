@@ -8,6 +8,72 @@ $theme-colors: (
 $primary: #00b7ae;
 $secondary: #f58518;
 $mynewDark: #737373;
+
+/*
+////// Formulate Theme Setup 
+*/
+$formulate-blue-l: #f3f4f4;
+$formulate-green: $primary;
+$formulate-green-l: $primary;
+@import '@braid/vue-formulate/themes/snow/snow.scss';
+
+.formulate-input[data-classification='file']
+  .formulate-input-upload-area
+  input:focus
+  ~ .formulate-input-upload-area-mask::before,
+.formulate-input[data-classification='file']
+  .formulate-input-upload-area
+  input:hover
+  ~ .formulate-input-upload-area-mask::before,
+.formulate-input[data-classification='file']
+  .formulate-input-upload-area
+  input[data-is-drag-hover]
+  ~ .formulate-input-upload-area-mask::before,
+.formulate-input[data-classification='file']
+  .formulate-input-upload-area
+  input:focus
+  ~ .formulate-input-upload-area-mask::before,
+.formulate-input[data-classification='file']
+  .formulate-input-upload-area
+  input:hover
+  ~ .formulate-input-upload-area-mask::before,
+.formulate-input[data-classification='file']
+  .formulate-input-upload-area
+  input[data-is-drag-hover]
+  ~ .formulate-input-upload-area-mask::before {
+  background-color: $primary;
+}
+.formulate-input[data-classification='file']
+  .formulate-files
+  .formulate-file-add,
+.formulate-input[data-classification='textarea'] textarea:focus,
+.formulate-input[data-classification='text'] input:focus {
+  border: 1px solid $primary;
+}
+.f-btn-primary.formulate-input[data-classification='button'] button {
+  border-color: $primary;
+  background-color: $primary;
+  &:active {
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+  }
+}
+.f-btn-secondary.formulate-input[data-classification='button'] button {
+  border-color: $secondary;
+  background-color: $secondary;
+  &:active {
+    background-color: darken($secondary, 10%);
+    border-color: darken($secondary, 10%);
+  }
+}
+.formulate-input[data-classification='file']
+  .formulate-files
+  .formulate-file-add {
+  color: $primary;
+}
+/*
+////// End Formulate Theme 
+*/
 .bg-black {
   background: #212121;
 }
@@ -18,6 +84,7 @@ $container-max-widths: (
   xl: 1140px,
   xxl: 1320px,
 );
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Lato:300,700,900');
 @import '~bootstrap/scss/bootstrap';
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css');
@@ -370,6 +437,14 @@ a:hover {
 }
 .navbar .dropdown-menu .menu-category-title {
   font-size: 14px;
+}
+#topMenu .dropdown-toggle::after {
+  content: '';
+  color: #fff;
+  border-top: 0.3em solid #fff;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
 }
 #product-megamenu {
   width: 100%;
