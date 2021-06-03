@@ -1212,7 +1212,6 @@ Blogs Page
     max-width: unset;
     max-height: 460px;
     height: auto;
-    min-height: 40vh;
     transition: 1.3s;
   }
 }
@@ -1226,7 +1225,6 @@ Blogs Page
     width: 100%;
     max-width: 100%;
     height: auto;
-    min-height: 30vh;
     transition: 1.3s;
   }
   .tags .btn.btn-outline-secondary.btn-sm {
@@ -1258,7 +1256,7 @@ Blogs Page
     z-index: 1058;
   }
   .card-img-overlay .position-absolute {
-    bottom: 1.5rem;
+    bottom: 0.5rem;
     max-width: 88%;
     transition: 0.6s;
     z-index: 2;

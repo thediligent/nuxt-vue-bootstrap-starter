@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="row w-100" :class="{ skeleton: loading }">
+    <div id="masonry" class="row w-100">
       <div
-        v-for="portfolio_item in portfolio_items"
-        :key="portfolio_item.id"
-        class="col-12 col-sm-6 col-md-4 col-lg-3"
+        v-for="fake_item in fake_items"
+        :key="fake_item.id"
+        class="col-6 col-md-4 col-lg-3 my-2"
       >
         <div class="card">
           <div class="card-body p-0">
@@ -14,15 +14,16 @@
               </div>
             </div>
             <img
-              class="quote-product-image"
+              lazy
+              class="quote-product-image img-fluid"
               loading="auto"
-              :src="portfolio_item.image_url"
+              :src="fake_item.download_url"
             />
-            <h5 class="card-title px-3">{{ portfolio_item.item_title }}</h5>
+            <h5 class="card-title p-3">{{ fake_item.author }}</h5>
             <p class="card-text px-3">
-              {{ portfolio_item.product_description }}
+              {{ fake_item.id }}
             </p>
-            <a class="link d-block" @click="loading = !loading">
+            <a class="link d-block m-3" @click="loading = !loading">
               Go somewhere
             </a>
           </div>
@@ -37,13 +38,13 @@ export default {
   data() {
     return {
       loading: true,
-      portfolio_items: [],
+      fake_items: [],
     }
   },
   mounted() {
     axios
-      .get('http://localhost:8055/items/product_portfolio_item/')
-      .then((response) => (this.portfolio_items = response.data.data))
+      .get('https://picsum.photos/v2/list?page=2&limit=10')
+      .then((response) => (this.fake_items = response.data))
       .then((this.loading = false))
   },
 }

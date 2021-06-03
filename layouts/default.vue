@@ -12,6 +12,7 @@
           class="container-fluid bg-light px-0 d-block pt-4"
         >
           <Nuxt />
+          <devicecheck />
           <sitefooter />
         </div>
       </div>

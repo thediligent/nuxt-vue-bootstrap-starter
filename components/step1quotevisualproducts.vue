@@ -55,8 +55,9 @@ export default {
   margin: 8px;
 }
 #quote-container .card {
-  max-width: 14em;
+  max-width: 12em;
+  min-width: 12em;
   text-align: center;
-  margin: 0 1em 1em 0;
+  margin: 0.25em;
 }
 </style>

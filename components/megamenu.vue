@@ -2,6 +2,7 @@
   <div>
     <b-navbar toggleable="lg" type="dark" variant="info">
       <b-nav
+        id="topMenu"
         class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top py-2"
       >
         <div class="container-xxl position-relative">
@@ -11,7 +12,7 @@
             <div class="col-auto d-xl-none text-center ps-2 pl-2 pe-2 pr-2">
               <b-link
                 id="nav-open-btn"
-                @click="showMenu = !showMenu"
+                v-b-toggle.sidebar-backdrop
                 class="toggle-nav nav-toggler h5"
               >
                 <img src="https://i.sig.gg/f/he7i/a.svg" style="width: 28px" />
@@ -79,7 +80,7 @@
               <b-nav-item id="" class="dropdown">Support</b-nav-item>
             </div>
             <div
-              class="col col-md-3 col-lg-auto text-end text-right px-0 mx-0 ps-2 ps-lg-0 pe-lg-2 pl-2 pl-lg-0 pr-2"
+              class="col col-md-4 col-lg-auto text-end text-right px-0 mx-0 ps-2 ps-lg-0 pe-lg-2 pl-2 pl-lg-0 pr-2"
             >
               <NuxtLink
                 class="btn btn-secondary text-white d-none d-md-inline"
@@ -97,7 +98,7 @@
                   ><img
                     src="https://i.sig.gg/f/heva/a.svg"
                     style="width: 24px"
-                    class="img-fluid d-none d-lg-inline d-xxl-none mx-2"
+                    class="img-fluid d-inline ms-2 ml-2"
                     alt="Call us via telephone"
                   /> </b-link
               ></Nuxtlink>
@@ -105,24 +106,82 @@
                 <img
                   src="https://i.sig.gg/f/heu7/a.svg"
                   style="width: 24px"
-                  class="img-fluid d-none d-lg-inline d-xxl-none mx-2"
-                  alt="cart-white"
+                  class="img-fluid d-none d-lg-inline mx-2"
+                  alt="cart"
               /></Nuxtlink>
               <Nuxtlink to="/accountLink">
                 <img
                   src="https://i.sig.gg/f/hf95/a.svg"
-                  class="img-fluid d-none d-xxl-inline mx-2"
+                  class="img-fluid d-none d-md-inline d-lg-none mx-2"
+                  alt="account"
+                  style="width: 24px"
                 />
               </Nuxtlink>
-              <a
-                id="accountDropdown"
-                class="px-0 mx-0 nav-link dropdown-toggle text-white d-none d-xl-inline"
-                style="width: 42px; overflow: hidden"
-                ><img
-                  src="https://i.sig.gg/f/hf95/a.svg"
-                  class="img-fluid d-lg-inline mx-2"
-                  style="width: 24px"
-              /></a>
+              <b-dropdown
+                id="dropdown-form"
+                text=""
+                ref="dropdown"
+                right
+                class="m-2 d-none d-lg-inline"
+              >
+                <a
+                  id="accountDropdownSmall"
+                  class="px-0 mx-0 nav-link dropdown-toggle text-white d-none d-lg-inline d-xl-none"
+                  style="width: 42px; overflow: hidden"
+                  ><img
+                    src="https://i.sig.gg/f/hf95/a.svg"
+                    class="img-fluid d-lg-inline mx-2"
+                    style="width: 24px"
+                /></a>
+                <b-dropdown-form>
+                  <b-form-group
+                    label="Email"
+                    label-for="dropdown-form-email"
+                    @submit.stop.prevent
+                  >
+                    <b-form-input
+                      id="dropdown-form-email"
+                      size="sm"
+                      placeholder="email@example.com"
+                    ></b-form-input>
+                  </b-form-group>
+
+                  <b-form-group
+                    label="Password"
+                    label-for="dropdown-form-password"
+                  >
+                    <b-form-input
+                      id="dropdown-form-password"
+                      type="password"
+                      size="sm"
+                      placeholder="Password"
+                    ></b-form-input>
+                  </b-form-group>
+
+                  <b-form-checkbox class="mb-3">Remember me</b-form-checkbox>
+                  <b-button variant="primary" size="sm" @click="onClick"
+                    >Sign In</b-button
+                  >
+                </b-dropdown-form>
+                <b-dropdown-divider></b-dropdown-divider>
+                <b-dropdown-item-button
+                  >Create an Account</b-dropdown-item-button
+                >
+                <b-dropdown-item-button
+                  >Forgot Password?</b-dropdown-item-button
+                >
+              </b-dropdown>
+              <Nuxtlink to="/accountLink">
+                <a
+                  id="accountDropdownLarge"
+                  class="px-0 mx-0 nav-link dropdown-toggle text-white d-none d-xl-inline"
+                  style="width: 42px; overflow: hidden"
+                  ><img
+                    src="https://i.sig.gg/f/hf95/a.svg"
+                    class="img-fluid d-lg-inline mx-2"
+                    style="width: 24px"
+                /></a>
+              </Nuxtlink>
             </div>
           </div>
         </div>
@@ -139,6 +198,12 @@ export default {
       showMenu: false,
     }
   },
+  methods: {
+    onClick() {
+      // Close the menu and (by passing true) return focus to the toggle button
+      this.$refs.dropdown.hide(true)
+    },
+  },
   computed: {
     mobileMenu() {
       return this.showMenu ? 'left-sidebar-open' : ''
@@ -146,4 +211,17 @@ export default {
   },
 }
 </script>
-<style></style>
+<style>
+.navbar .dropdown-menu.show {
+  top: 48px;
+  border-radius: 0 0 0.25em 0.25em;
+  min-width: 14em;
+}
+#topMenu a.nav-link {
+  padding: 0.5rem 0.5rem !important;
+}
+input[type='checkbox' i] {
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+}
+</style>

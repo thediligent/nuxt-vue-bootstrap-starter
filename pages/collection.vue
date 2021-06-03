@@ -130,7 +130,11 @@
                 class="col-12 bg-black position-relative overflow-hidden rounded-start"
               >
                 <a href="#" class="blog-url">
-                  <img src="" class="blog-image" group="BlogDefault" />
+                  <img
+                    :src="post.main_image_url"
+                    class="blog-image"
+                    group="BlogDefault"
+                  />
                   <div class="card-img-overlay d-block d-md-none">
                     <div class="position-absolute">
                       <h5
@@ -210,6 +214,7 @@ export default {
   data() {
     return {
       perPage: 10,
+      rows: 4,
       currentPage: 1,
       isLoading: true,
       posts: [],

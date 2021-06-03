@@ -1,15 +1,6 @@
 <template>
   <div style="background: transparent">
-    <hooper
-      group="products"
-      :short-drag="false"
-      :items-to-show="currentItemsToShow"
-      :initial-slide="0"
-      :wheel-control="false"
-      :center-mode="true"
-      :infinite-scroll="true"
-      class="productslider"
-    >
+    <hooper group="products" class="productslider">
       <slide class="col-6 col-md-3 col-xl-2">
         <div class="product">
           <b-link to="/productlanding"><h4>Product 1</h4></b-link>
@@ -84,6 +75,7 @@
 <script>
 import { Hooper, Slide } from 'hooper'
 import 'hooper/dist/hooper.css'
+
 export default {
   name: 'OnPageProductSlider',
   components: {
@@ -92,25 +84,34 @@ export default {
   },
   data() {
     return {
-      currentItemsToShow: 6,
+      hooperSettings: {
+        infiniteScroll: true,
+        shortDrag: false,
+        wheelControl: true,
+        centerMode: false,
+        initialSlide: 0,
+        autoPlay: true,
+        playSpeed: 4500,
+        itemsToShow: 6,
+        breakpoints: {
+          2400: {
+            itemsToShow: 6,
+          },
+          1800: {
+            itemsToShow: 6,
+          },
+          1500: {
+            itemsToShow: 6,
+          },
+          1100: {
+            itemsToShow: 4,
+          },
+          768: {
+            itemsToShow: 3,
+          },
+        },
+      },
     }
-  },
-  watch: {
-    carouselData() {
-      this.$refs.carousel.slideTo(this.carouselData)
-    },
-  },
-  mounted() {},
-  methods: {
-    slidePrev() {
-      this.$refs.carousel.slidePrev()
-    },
-    slideNext() {
-      this.$refs.carousel.slideNext()
-    },
-    updateCarousel(payload) {
-      this.myCarouselData = payload.currentSlide
-    },
   },
 }
 </script>
