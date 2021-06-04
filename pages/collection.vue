@@ -129,7 +129,7 @@
               <div
                 class="col-12 bg-black position-relative overflow-hidden rounded-start"
               >
-                <a href="#" class="blog-url">
+                <a :href="urlPermalinkRoot + post.url" class="blog-url">
                   <img
                     :src="post.main_image_url"
                     class="blog-image"
@@ -140,7 +140,11 @@
                       <h5
                         class="blog-category text-primary fw-bold small text-uppercase mb-2"
                       ></h5>
-                      <h5 class="blog-title card-title">{{ post.title }}</h5>
+                      <h5 class="blog-title card-title">
+                        <b-link :href="urlPermalinkRoot + post.url">
+                          {{ post.title }}
+                        </b-link>
+                      </h5>
                     </div>
                   </div>
                 </a>
@@ -152,18 +156,20 @@
                       class="blog-category text-muted fw-bold small text-uppercase mb-2"
                     ></h5>
                     <h5 class="blog-title card-title text-primary">
-                      {{ post.title }}
+                      <b-link :href="urlPermalinkRoot + post.url">
+                        {{ post.title }}
+                      </b-link>
                     </h5>
                   </div>
                   <p class="blog-description card-text">
                     {{ post.excerpt }}
                   </p>
-                  <a
-                    href="#"
+                  <b-link
+                    :href="urlPermalinkRoot + post.url"
                     class="blog-url m-0 mt-2 waves-effect waves-light"
                   >
                     Continue reading <i class="bi bi-arrow-right"></i
-                  ></a>
+                  ></b-link>
                   <div
                     class="tags mt-4 mb-2"
                     style="overflow-x: scroll; width: max-content"
@@ -217,6 +223,7 @@ export default {
       rows: 4,
       currentPage: 1,
       isLoading: true,
+      urlPermalinkRoot: '/blog/',
       posts: [],
     }
   },
@@ -231,5 +238,9 @@ export default {
 <style>
 #blogheader {
   z-index: 1000;
+}
+#blogs-container .card .blog-image {
+  min-height: 100%;
+  transition: 1.3s;
 }
 </style>

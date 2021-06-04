@@ -66,7 +66,7 @@
             </div>
             <div id="megamenu" class="col-lg-auto d-none d-xl-flex ml-auto">
               <b-nav-item class="text-white"
-                ><NuxtLink class="text-white" to="/pricing">Pricing</NuxtLink>
+                ><NuxtLink class="text-white" to="/account">Pricing</NuxtLink>
               </b-nav-item>
               <b-nav-item class="text-white">Challenge Coins</b-nav-item>
               <b-nav-item class="text-white"

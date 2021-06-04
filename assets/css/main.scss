@@ -9,6 +9,25 @@ $primary: #00b7ae;
 $secondary: #f58518;
 $mynewDark: #737373;
 
+.spinner-border,
+.spinner-border.text-secondary {
+  border-left-color: $secondary;
+  border-top-color: $secondary;
+  border-bottom-color: $secondary;
+}
+
+.spinner-border.text-primary {
+  border-left-color: $primary;
+  border-top-color: $primary;
+  border-bottom-color: $primary;
+}
+
+.spinner-border.text-white {
+  border-left-color: #fff;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
 /*
 ////// Formulate Theme Setup 
 */
@@ -28,7 +47,9 @@ $formulate-green-l: $primary;
 .formulate-input[data-classification='file']
   .formulate-input-upload-area
   input[data-is-drag-hover]
-  ~ .formulate-input-upload-area-mask::before,
+  ~ .formulate-input-upload-area-mask::before {
+  background-color: $primary;
+}
 .formulate-input[data-classification='file']
   .formulate-input-upload-area
   input:focus
@@ -41,7 +62,6 @@ $formulate-green-l: $primary;
   .formulate-input-upload-area
   input[data-is-drag-hover]
   ~ .formulate-input-upload-area-mask::before {
-  background-color: $primary;
 }
 .formulate-input[data-classification='file']
   .formulate-files
@@ -74,6 +94,9 @@ $formulate-green-l: $primary;
 /*
 ////// End Formulate Theme 
 */
+i.icon svg {
+    width: 16px;
+}
 .bg-black {
   background: #212121;
 }
@@ -264,11 +287,7 @@ a:hover {
   z-index: 4;
   background: rgba(0, 0, 0, 0.85);
 }
-.spinner-border {
-  border-left-color: #f58518;
-  border-top-color: #f58518;
-  border-bottom-color: #f58518;
-}
+
 @media (min-width: 768px) {
   #left-sidebar {
     left: -40vw;
@@ -911,6 +930,7 @@ Gallery Popup accross the site customizations
 /*
 Nav Pill Tabs with Underline
 */
+
 .nav-pills-underline .nav-link {
   color: #00b7ae6d !important;
   border-bottom: 1px solid #00b7ae6d;
@@ -922,6 +942,7 @@ Nav Pill Tabs with Underline
 .nav-pills-underline .nav-link.active,
 .show > .nav-pills-underline .nav-link {
   color: #00b7ae !important;
+  border-color: transparent;
   background-color: transparent !important;
   border-bottom: 2px solid #00b7ae;
   transition: all 200ms;
@@ -954,6 +975,7 @@ Nav Pill Tabs with Underline
 }
 .nav-pills-underline .nav-link:hover {
   color: #00b7ae !important;
+  border-color: transparent transparent transparent;
   border-bottom: 2px solid #00b7ae;
   transition: all 200ms;
 }

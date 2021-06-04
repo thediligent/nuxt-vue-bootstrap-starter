@@ -49,17 +49,28 @@
           <h2>Button classification</h2>
         </div>
       </div>
-      <div class="specimen col-12 col-md-6">
+      <div class="specimen col-12 col-md-6 col-lg-4">
         <h3>Button</h3>
         <FormulateInput label="Click me" class="f-btn-primary" type="button" />
       </div>
-      <div class="specimen col-12 col-md-6">
+      <div class="specimen col-12 col-md-6 col-lg-4">
         <h3>Submit</h3>
         <FormulateInput
           label="Submit me"
           class="f-btn-secondary"
           type="submit"
         />
+      </div>
+      <div class="specimen col-12 col-md-6 col-lg-4">
+        <h3>Loader</h3>
+        <FormulateInput type="button" disabled>
+          Loading
+          <span
+            class="spinner-border spinner-border-sm text-white ml-2 ms-2"
+            role="status"
+            aria-hidden="true"
+          ></span>
+        </FormulateInput>
       </div>
     </div>
     <div class="row pt-1 pb-3 border">
