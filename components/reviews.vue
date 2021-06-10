@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3 class="text-muted py-2">My Reviews</h3>
-    <div class="p-4 bg-white shadow">
+    <div class="p-4 bg-white card">
       <div class="row py-2">
         <div class="col-12 col-md-8">
           <h5>Signature Coins was great to work with</h5>
@@ -29,7 +29,7 @@
         <span class="small">6/1/21 - 5:58pm</span>
       </p>
     </div>
-    <div class="p-4 bg-white shadow my-4">
+    <div class="p-4 bg-white card my-4">
       <div class="row py-2">
         <div class="col-12 col-md-8">
           <h5>Signature Coins was great to work with</h5>

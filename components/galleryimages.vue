@@ -1,34 +1,19 @@
 <template>
-  <div>
-    <div class="row w-100" :class="{ skeleton: loading }">
-      <div
-        v-for="portfolio_item in portfolio_items"
-        :key="portfolio_item.id"
-        class="col-12 col-sm-6 col-md-4 col-lg-3"
-      >
-        <div class="card">
-          <div class="card-body p-0">
-            <div class="loading-spinner text-center clearfix">
-              <div class="spinner-border text-secondary" role="status">
-                <span class="visually-hidden d-none">Loading...</span>
-              </div>
-            </div>
-            <img
-              class="quote-product-image"
-              loading="auto"
-              :src="portfolio_item.image_url"
-            />
-            <h5 class="card-title px-3">{{ portfolio_item.item_title }}</h5>
-            <p class="card-text px-3">
-              {{ portfolio_item.product_description }}
-            </p>
-            <a class="link d-block" @click="loading = !loading">
-              Go somewhere
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="container-xl-fluid">
+    <vue-masonry-wall :items="gallery_items" :options="{ padding: 12 }">
+      <template v-slot:default="{ item }">
+        <b-card
+          overlay
+          :img-src="'http://localhost:8055/assets/' + item.gallery_image"
+          img-alt="Card Image"
+          class="item overflow-hidden"
+          text-variant="white"
+          :title="item.image_name"
+          sub-title="Subtitle"
+        >
+        </b-card>
+      </template>
+    </vue-masonry-wall>
   </div>
 </template>
 <script>
@@ -36,14 +21,15 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      title: 'Challenge Coin Gallery - Signature Coins Gallery', // Other meta information
       loading: true,
-      portfolio_items: [],
+      gallery_items: [],
     }
   },
   mounted() {
     axios
-      .get('http://localhost:8055/items/product_portfolio_item/')
-      .then((response) => (this.portfolio_items = response.data.data))
+      .get('http://localhost:8055/items/product_gallery_image/')
+      .then((response) => (this.gallery_items = response.data.data))
       .then((this.loading = false))
   },
 }
@@ -55,5 +41,19 @@ export default {
 .skeleton .loading-spinner {
   display: block;
   margin: 8px;
+}
+.masonry-wall .card-title {
+  position: absolute;
+  bottom: 10px;
+  font-size: 1em !important;
+}
+.card-body.card-img-overlay:before {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60%;
+  bottom: 0;
 }
 </style>

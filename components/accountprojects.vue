@@ -2,18 +2,7 @@
   <div>
     <div class="row p-2">
       <div class="col-12 col-lg-3">
-        <h3 class="text-muted mb-3">Previous Orders</h3>
-      </div>
-      <div class="col-12 col-md-4">
-        <FormulateInput
-          type="search"
-          placeholder="Search Orders..."
-          help="Invoice number, project name, etc..."
-          class="small"
-        />
-      </div>
-      <div class="d-none d-md-flex col-md-4">
-        <daterange />
+        <h3 class="text-muted mb-3">Current Projects</h3>
       </div>
     </div>
     <div class="row p-2">
@@ -33,7 +22,7 @@
             <div class="col-6 col-md-4 d-inline-block ml-auto text-right p-3">
               <div class="">
                 <b-link class="" href="#"
-                  >Order #604729
+                  >Proof #604729
                   <i class="icon"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -51,36 +40,25 @@
                   ></i>
                 </b-link>
                 <br />
-                <b-link class="my-2" href="#"
-                  >View Invoice
-                  <i class="icon"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      /></svg
-                  ></i> </b-link
-                ><br />
-                <b-button variant="outline-secondary my-2">Re-Order </b-button>
+                <b-button variant="outline-secondary my-2">Order</b-button>
               </div>
             </div>
             <div class="col-12">
+              <h5 class="text-muted">Quote Request:</h5>
               <p class="text-small mt-2 font-weight-light">
-                Scott Poteet placed a $10,000.00 order for 2,500 challenge coins
+                I am looking to resdesign our commanders coin. I had an
+                individual design a new coin which I like the overall design but
+                on the back side I would like the tails of the plane to be a
+                little better so I am not sure if your artist can redesign the
+                tails of C-17 or C-5 on the back but the rest of the coin we
+                like. So would like to see what it would look like an cleaned up
+                a little bit. Here is a copy of the design.
               </p>
             </div>
           </div>
           <div class="flex px-3"></div>
           <b-tabs class="nav flex-row nav-pills-underline" content-class="p-3">
-            <b-tab title="Artwork">
+            <b-tab title="Proofs">
               <div class="col-12">
                 <img
                   class="d-inline pr-2"
@@ -279,7 +257,7 @@
                 </table>
               </div>
             </b-tab>
-            <b-tab title="Shipping" lazy
+            <b-tab title="Revisions" lazy
               ><div class="row">
                 <div class="d-flex col-12 col-md-6">
                   <div
@@ -374,6 +352,12 @@
           </b-tabs>
         </li>
       </ul>
+    </div>
+    <div class="row p-2">
+      <div class="col-12 col-lg-3">
+        <h3 class="text-muted mb-3">Older Projects</h3>
+      </div>
+      <hr />
     </div>
     <div class="row p-2">
       <h4 class="h5 text-muted text-right pt-2 px-3">March 2021</h4>
@@ -1081,15 +1065,6 @@
           </b-tabs>
         </li>
       </ul>
-      <div class="text-center py-3">
-        <p class="text-primary">Load More</p>
-        <b-spinner
-          class="my-1"
-          small
-          variant="primary"
-          label="Text Centered"
-        ></b-spinner>
-      </div>
     </div>
   </div>
 </template>

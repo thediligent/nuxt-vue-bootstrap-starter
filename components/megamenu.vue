@@ -68,12 +68,23 @@
               <b-nav-item class="text-white"
                 ><NuxtLink class="text-white" to="/account">Pricing</NuxtLink>
               </b-nav-item>
-              <b-nav-item class="text-white">Challenge Coins</b-nav-item>
+              <b-dropdown
+                toggle-tag="a"
+                tag="div"
+                menu-class="container mx-auto overflow-hidden py-0"
+                boundary="viewport"
+                variant="link"
+              >
+                <template #button-content>
+                  <span class="text-white">Challenge Coins</span>
+                </template>
+                <productdropdownmenu id="product-megamenu" />
+              </b-dropdown>
               <b-nav-item class="text-white"
                 ><NuxtLink class="text-white" to="/gallery">Gallery</NuxtLink>
               </b-nav-item>
               <b-nav-item
-                ><NuxtLink class="text-white" to="/collection"
+                ><NuxtLink class="text-white" to="/blog"
                   >Blog</NuxtLink
                 ></b-nav-item
               >
@@ -82,6 +93,18 @@
                   >Forms</NuxtLink
                 ></b-nav-item
               >
+              <b-dropdown
+                toggle-tag="a"
+                tag="div"
+                menu-class="container mx-auto overflow-hidden py-0"
+                boundary="viewport"
+                variant="link"
+              >
+                <template #button-content>
+                  <span class="text-white">Support</span>
+                </template>
+                <supportdropdownmenu id="support-megamenu" />
+              </b-dropdown>
             </div>
             <div
               class="col col-md-4 col-lg-auto text-end text-right px-0 mx-0 ps-2 ps-lg-0 pe-lg-2 pl-2 pl-lg-0 pr-2"
@@ -193,15 +216,15 @@ export default {
       showMenu: false,
     }
   },
+  computed: {
+    mobileMenu() {
+      return this.showMenu ? 'left-sidebar-open' : ''
+    },
+  },
   methods: {
     onClick() {
       // Close the menu and (by passing true) return focus to the toggle button
       this.$refs.dropdown.hide(true)
-    },
-  },
-  computed: {
-    mobileMenu() {
-      return this.showMenu ? 'left-sidebar-open' : ''
     },
   },
 }

@@ -12,12 +12,13 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-// SCSS file in the project
+    // SCSS file in the project
     '~/assets/css/main',
   ],
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '~/plugins/axios',
+    '~/plugins/masonry',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -31,7 +32,7 @@ export default {
     '@braid/vue-formulate/nuxt',
   ],
   device: {
-    refreshOnResize: true
+    refreshOnResize: true,
   },
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
@@ -42,14 +43,6 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
   ],
-
-  // bootstrapVue: {
-  //   bootstrapCSS: false,
-  //   bootstrapVueCSS: false,
-  //   icons: false, // doesn't work
-  //   // componentPlugins: [], ///only work when something is here
-  //   // directivePlugins: ['VBPopoverPlugin', 'VBTooltipPlugin', 'VBScrollspyPlugin']
-  // },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {

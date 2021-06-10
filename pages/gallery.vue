@@ -1,6 +1,6 @@
 <template>
   <div class="mt-5 px-3">
-    <galleryimages />
+    <!-- <galleryimages /> -->
     <fakegalleryimages />
   </div>
 </template>

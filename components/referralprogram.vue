@@ -1,104 +1,75 @@
 <template>
   <div>
-    <b-card
-      id="referralcard"
-      bg-variant="dark"
-      text-variant="white"
-      title="3 Easy Ways to Earn Referral Credits"
-      class="mt-1 mb-3 rounded"
-    >
-      <b-card-text class="pb-3">
-        💵 Give your friends a $50 credit and have $50 added to your account
-        when they buy.
-      </b-card-text>
-      <div class="pb-2">
-        <b-tabs content-class="p-3 bg-white">
-          <b-tab title="Share Referral Link" active>
-            <b-form-input
-              v-model="text"
-              placeholder="https://signaturecompany.com/?promo=Stormy2020"
-            ></b-form-input>
-            <div class="pt-3 text-right">
-              <b-button variant="outline-primary">Copy Link</b-button>
-              <b-button variant="outline-primary"
-                >Share
-                <svg
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  class="text-primary opacity-40"
-                >
-                  <path
-                    d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"
-                  ></path></svg
-              ></b-button>
-              <b-button variant="primary"
-                >Share<svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="ml-1 text-white opacity-40"
-                >
-                  <path
-                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"
-                  /></svg
-              ></b-button>
-            </div>
-          </b-tab>
-          <b-tab title="Email">
-            <div class="row">
-              <div class="col">
-                <b-form-input
-                  v-model="text"
-                  placeholder="friend@emailaddress.com"
-                ></b-form-input>
-              </div>
-              <div class="col">
-                <button type="button" class="btn btn-primary">Send</button>
-              </div>
-            </div>
-          </b-tab>
-        </b-tabs>
-      </div>
-    </b-card>
     <div class="card-text">
-      <div class="d-flex">
-        <h3 class="text-muted pl-2">Company Name - First LastName</h3>
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex">
+            <h3 class="text-muted pl-2">Company Name - First LastName</h3>
+          </div>
+          <div class="p-2">
+            <a id="customer-phone-link" href="tel:+1-973-960-1471"
+              >(973) 960-1471</a
+            >
+            <span id="customer-phone-email-separator">—</span>
+            <a
+              id="customer-email-link"
+              href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=mgrowick%40gmail.com&amp;name=Stacking+Stormtrooper+-+Matthew+Growick"
+              target="_blank"
+              >mgrowick@gmail.com</a
+            >
+            <div class="text-muted small my-2">
+              Customer since 2019
+              <span id="customer-user-role-option-parent"
+                >-
+                <span id="customer-user-role-option"> Personal Use/Hobby </span>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="p-2">
-        <a id="customer-phone-link" href="tel:+1-973-960-1471"
-          >(973) 960-1471</a
-        >
-        <span id="customer-phone-email-separator">—</span>
-        <a
-          id="customer-email-link"
-          href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=mgrowick%40gmail.com&amp;name=Stacking+Stormtrooper+-+Matthew+Growick"
-          target="_blank"
-          >mgrowick@gmail.com</a
-        >
-        <div class="text-muted small my-2">
-          Customer since 2019
-          <span id="customer-user-role-option-parent"
-            >-
-            <span id="customer-user-role-option"> Personal Use/Hobby </span>
-          </span>
+      <div class="row py-3">
+        <div class="col-12 col-md-6 col-lg-3 my-1">
+          <b-card title="Referral Code">
+            <b-card-text>
+              <p class="py-1 display-5">Stormy2020</p>
+            </b-card-text>
+            <b-button href="#" variant="primary">Copy Code</b-button>
+          </b-card>
         </div>
-        <div class="pt-3">
-          <p>Referral code: <span class="pl-2">Stormy2020</span></p>
-          <p>Account balance: <span class="pl-2">$504.00</span></p>
-          <p>Redeemed balance: <span class="pl-2">$1,582.00</span></p>
-          <p>Referred total: <span class="pl-2">$44,118.63</span></p>
+        <div class="col-12 col-md-6 col-lg-3 my-1">
+          <b-card bg-variant="success" text-variant="white" title="Balance">
+            <b-card-text>
+              <p class="py-1 display-5">$504.00</p>
+              <p class="small">Account balance</p>
+            </b-card-text>
+          </b-card>
         </div>
+        <div class="col-12 col-md-6 col-lg-3 my-1">
+          <b-card bg-variant="secondary" text-variant="white" title="Redeemed">
+            <b-card-text>
+              <p class="py-1 display-5">$1,582.00</p>
+              <p class="small">Redeemed balance</p>
+            </b-card-text>
+          </b-card>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 my-1">
+          <b-card title="Reffered">
+            <b-card-text>
+              <p class="py-1 display-5 text-success">$44,118.63</p>
+              <p class="small">Referred Business</p>
+            </b-card-text>
+          </b-card>
+        </div>
+      </div>
+      <div class="row mb-3">
         <div id="customer-user-associations-parent">
           <hr />
           <div class="text-muted small" style="margin-bottom: 4px">
             Other accounts
           </div>
-          <div class="row" id="customer-other-accounts-parent">
+          <div id="customer-other-accounts-parent" class="row">
             <div
-              class="col-12 mb-075"
+              class="col-12 mt-1 mb-3"
               data-user-association-id="11e11313-f9e8-11ea-a834-0acec95b80b0"
             >
               <a href="/customer?id=Fev-39wtdaA">Stacking Stormtrooper</a>
@@ -115,8 +86,74 @@
                 >
               </div>
             </div>
+            <hr />
           </div>
         </div>
+      </div>
+      <div class="row">
+        <b-card
+          id="referralcard"
+          bg-variant="dark"
+          text-variant="white"
+          title="3 Easy Ways to Earn Referral Credits"
+          class="mt-1 mb-3 rounded"
+        >
+          <b-card-text class="pb-3">
+            💵 Give your friends a $50 credit and have $50 added to your account
+            when they buy.
+          </b-card-text>
+          <div class="pb-2">
+            <b-tabs content-class="p-3 bg-white">
+              <b-tab title="Share Referral Link" active>
+                <b-form-input
+                  v-model="text"
+                  placeholder="https://signaturecompany.com/?promo=Stormy2020"
+                ></b-form-input>
+                <div class="pt-3 text-right">
+                  <b-button variant="outline-primary">Copy Link</b-button>
+                  <b-button variant="primary"
+                    >Share
+                    <svg
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="text-white opacity-40"
+                    >
+                      <path
+                        d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"
+                      ></path></svg
+                  ></b-button>
+                  <b-button variant="primary"
+                    >Share<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="ml-1 text-white opacity-40"
+                    >
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"
+                      /></svg
+                  ></b-button>
+                </div>
+              </b-tab>
+              <b-tab title="Email">
+                <div class="row">
+                  <div class="col">
+                    <b-form-input
+                      v-model="text"
+                      placeholder="friend@emailaddress.com"
+                    ></b-form-input>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-primary">Send</button>
+                  </div>
+                </div>
+              </b-tab>
+            </b-tabs>
+          </div>
+        </b-card>
       </div>
       <div id="customer-allow-html-alert" class="alert alert-info mt-1 d-none">
         <i class="fa fa-info-circle"></i>
@@ -480,286 +517,6 @@
         <div class="small" style="padding-top: 2px">9/23/20 - $1,394.00</div>
       </div>
       <div class="pb-05">
-        <a href="/orders/544589"> 544589 - Veterans Jiu-Jitsu - Joey Zente </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=veteransjiujitsu%40gmail.com&amp;name=Veterans+Jiu-Jitsu+-+Joey+Zente"
-            target="_blank"
-            >veteransjiujitsu@gmail.com</a
-          >
-          - <a href="tel:+1-512-944-9014">(512) 944-9014</a>
-        </div>
-        <div class="small" style="padding-top: 2px">9/17/20 - $291.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/544328">
-          544328 - Westworth Village PD - Kevin Reaves
-        </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=dallen%40cityofwestworth.com&amp;name=Westworth+Village+PD+-+Dustin+Allen"
-            target="_blank"
-            >dallen@cityofwestworth.com</a
-          >
-          - <a href="tel:+1-912-844-3872">(912) 844-3872</a>
-        </div>
-        <div class="small" style="padding-top: 2px">9/16/20 - $1,678.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/543506"> 543506 - First Reliance Bank - Corey Hall </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=chall%40firstreliance.com&amp;name=First+Reliance+Bank+-+Corey+Hall"
-            target="_blank"
-            >chall@firstreliance.com</a
-          >
-          - <a href="tel:+1-843-674-3262">(843) 674-3262</a>
-        </div>
-        <div class="small" style="padding-top: 2px">9/11/20 - $470.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/542291"> 542291 - Mario Nodarse </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=nodarse2%40yahoo.com&amp;name=Yessenia+Nodarse"
-            target="_blank"
-            >nodarse2@yahoo.com</a
-          >
-          - <a href="tel:+1-239-240-7409">(239) 240-7409</a>
-        </div>
-        <div class="small" style="padding-top: 2px">9/8/20 - $994.81</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/541901"> 541901 - David Garsha </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=davidgarsha%40icloud.com&amp;name=David+Garsha"
-            target="_blank"
-            >davidgarsha@icloud.com</a
-          >
-          - <a href="tel:+1-916-303-6862">(916) 303-6862</a>
-        </div>
-        <div class="small" style="padding-top: 2px">9/3/20 - $358.50</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/541163"> 541163 - ASPC Yuma - Warehouse </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=mmontes1%40azadc.gov&amp;name=Aspc+Yuma+-+Warehouse"
-            target="_blank"
-            >mmontes1@azadc.gov</a
-          >
-          - <a href="tel:+1-928-627-8871">(928) 627-8871</a>
-        </div>
-        <div class="small" style="padding-top: 2px">9/1/20 - $1,318.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/540650"> 540650 - Mark Curato </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/3ba6db05f4d113ea/new-ticket/?email=markandlauren1886%40gmail.com&amp;name=Mark+Curato"
-            target="_blank"
-            >markandlauren1886@gmail.com</a
-          >
-          - <a href="tel:+1-202-236-5334">(202) 236-5334</a>
-        </div>
-        <div class="small" style="padding-top: 2px">8/31/20 - $373.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/540551"> 540551 - Joe Kern </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=kernbrothers.dj%40gmail.com&amp;name=Joe+Kern"
-            target="_blank"
-            >kernbrothers.dj@gmail.com</a
-          >
-          - <a href="tel:+1-507-382-5700">(507) 382-5700</a>
-        </div>
-        <div class="small" style="padding-top: 2px">8/28/20 - $495.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/539852"> 539852 - Brooke Schmitt </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=brookeschmitt85%40gmail.com&amp;name=Brooke+Schmitt"
-            target="_blank"
-            >brookeschmitt85@gmail.com</a
-          >
-          - <a href="tel:+1-334-332-3220">(334) 332-3220</a>
-        </div>
-        <div class="small" style="padding-top: 2px">8/26/20 - $495.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/539363"> 539363 - Joshua Bautz </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=joshua.bautz%40gmail.com&amp;name=Joshua+Bautz"
-            target="_blank"
-            >joshua.bautz@gmail.com</a
-          >
-          - <a href="tel:+1-808-298-6271">(808) 298-6271</a>
-        </div>
-        <div class="small" style="padding-top: 2px">8/24/20 - $1,247.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/537908"> 537908 - Grant Rowlett </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=cgrowlett%40gmail.com&amp;name=Grant+Rowlett"
-            target="_blank"
-            >cgrowlett@gmail.com</a
-          >
-          - <a href="tel:+1-615-631-9079">(615) 631-9079</a>
-        </div>
-        <div class="small" style="padding-top: 2px">8/17/20 - $535.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/537542"> 537542 - Zac Wills </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=zachary.a.wills%40usdoj.gov&amp;name=Zac+Wills"
-            target="_blank"
-            >zachary.a.wills@usdoj.gov</a
-          >
-          - <a href="tel:+1-503-686-4425">(503) 686-4425</a>
-        </div>
-        <div class="small" style="padding-top: 2px">8/13/20 - $1,386.48</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/537506"> 537506 - Lucas M DeGand </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=lucasdegand%40hotmail.com&amp;name=Lucas+M+DeGand"
-            target="_blank"
-            >lucasdegand@hotmail.com</a
-          >
-          - <a href="tel:+1-619-471-4661">(619) 471-4661</a>
-        </div>
-        <div class="small" style="padding-top: 2px">8/13/20 - $1,141.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/537608">
-          537608 - Oakland FC Leopards - Edward Stephen
-        </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=edward.stephen%40oaklandleopards.com&amp;name=Oakland+Leopards+-+Edward+Stephen"
-            target="_blank"
-            >edward.stephen@oaklandleopards.com</a
-          >
-          - <a href="tel:+1-925-299-1619">(925) 299-1619</a>
-        </div>
-        <div class="small" style="padding-top: 2px">8/13/20 - $410.25</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/537173"> 537173 - Chenango EVS - Ryan Warner </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=chenangoevs%40gmail.com&amp;name=Chenango+EVS+-+Ryan+Warner"
-            target="_blank"
-            >chenangoevs@gmail.com</a
-          >
-          - <a href="tel:+1-607-427-7372">(607) 427-7372</a>
-        </div>
-        <div class="small" style="padding-top: 2px">8/12/20 - $777.50</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/536303"> 536303 - Matt Gillis </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=gillis.matt.377%40gmail.com&amp;name=Matt+Gillis"
-            target="_blank"
-            >gillis.matt.377@gmail.com</a
-          >
-          - <a href="tel:+1-250-898-7497">+1 250-898-7497</a>
-        </div>
-        <div class="small" style="padding-top: 2px">8/7/20 - $414.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/534968"> 534968 - USFOR-A/CJIOC - Sam I Karl </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=samkarl%40gmail.com&amp;name=USFOR-A%2FCJIOC+-+Sam+I+Karl"
-            target="_blank"
-            >samkarl@gmail.com</a
-          >
-          - <a href="tel:+1-206-724-5378">(206) 724-5378</a>
-        </div>
-        <div class="small" style="padding-top: 2px">7/31/20 - $527.08</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/532298"> 532298 - Tatiana Velez </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=tativel11%40yahoo.com&amp;name=Tatiana+Velez"
-            target="_blank"
-            >tativel11@yahoo.com</a
-          >
-          - <a href="tel:+1-772-812-8355">(772) 812-8355</a>
-        </div>
-        <div class="small" style="padding-top: 2px">7/20/20 - $614.80</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/530402"> 530402 - Richard Reed </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=richard.c.reed46.mil%40mail.mil&amp;name=NYNG+CDTF+-+Rich+Reed"
-            target="_blank"
-            >richard.c.reed46.mil@mail.mil</a
-          >
-          - <a href="tel:+1-716-481-7301">(716) 481-7301</a>
-        </div>
-        <div class="small" style="padding-top: 2px">7/9/20 - $1,540.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/523313"> 523313 - Devin Posey </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=posey397%40gmail.com&amp;name=Devin+Posey"
-            target="_blank"
-            >posey397@gmail.com</a
-          >
-          - <a href="tel:+1-224-413-9425">(224) 413-9425</a>
-        </div>
-        <div class="small" style="padding-top: 2px">6/5/20 - $718.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/521939"> 521939 - Angela Clapsadle </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=angela.clapsadle%40yahoo.com&amp;name=Angela+Clapsadle"
-            target="_blank"
-            >angela.clapsadle@yahoo.com</a
-          >
-          - <a href="tel:+1-678-787-7333">(678) 787-7333</a>
-        </div>
-        <div class="small" style="padding-top: 2px">5/29/20 - $552.72</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/521888"> 521888 - Avi Bhavaraju </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=avi.bhavaraju%40gmail.com&amp;name=University+of+Arkansas+for+Medical+Sciences%2C+Department+of+Surgery+-+Avi+Bhavaraju"
-            target="_blank"
-            >avi.bhavaraju@gmail.com</a
-          >
-          - <a href="tel:+1-404-668-2696">(404) 668-2696</a>
-        </div>
-        <div class="small" style="padding-top: 2px">5/29/20 - $904.00</div>
-      </div>
-      <div class="pb-05">
-        <a href="/orders/517025"> 517025 - Guyton Robinson </a>
-        <div class="small">
-          <a
-            href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=lee.robinson2022%40gmail.com&amp;name=Guyton+Robinson"
-            target="_blank"
-            >lee.robinson2022@gmail.com</a
-          >
-          - <a href="tel:+1-229-231-0628">(229) 231-0628</a>
-        </div>
-        <div class="small" style="padding-top: 2px">5/6/20 - $575.00</div>
-      </div>
-      <div class="pb-05">
         <a href="/orders/478203"> 478203 - Angela Clapsadle </a>
         <div class="small">
           <a
@@ -771,48 +528,6 @@
         </div>
         <div class="small" style="padding-top: 2px">11/6/19 - $379.00</div>
       </div>
-      <hr />
-      <div class="text-muted small" style="margin-bottom: 4px">
-        Most recent billing
-      </div>
-      Matthew Growick<br />
-      76 Laurel Drive<br />
-      Little Silver, NJ 07739<br />
-      United States <br /><a href="tel:+1-973-960-1471">(973) 960-1471</a>
-      <br /><a
-        href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=mgrowick%40gmail.com&amp;name=Matthew+Growick"
-        target="_blank"
-        >mgrowick@gmail.com</a
-      >
-      <br />
-      Check
-      <hr />
-      <div class="text-muted small" style="margin-bottom: 4px">
-        Most recent shipping
-      </div>
-      Matthew Growick<br />
-      76 Laurel Drive<br />
-      Little Silver, NJ 07739<br />
-      United States <br /><a href="tel:+1-973-960-1471">(973) 960-1471</a>
-      <br /><a
-        href="https://secure.helpscout.net/mailbox/7cad925521596cbb/new-ticket/?email=mgrowick%40gmail.com&amp;name=Matthew+Growick"
-        target="_blank"
-        >mgrowick@gmail.com</a
-      >
-      <hr />
-      <span class="customer-first-name">Matthew</span>
-      has spent $1,847.00 on 7 orders, averaging $263.86 per order.<br />
-      Latest order placed on 2/23/2021.
-      <hr />
-      <a
-        class="text-muted small"
-        style="margin-bottom: 4px"
-        href="#"
-        id="customer-merge-account-link"
-      >
-        <i class="fa fa-code-fork" aria-hidden="true"></i>
-        Merge customer
-      </a>
     </div>
   </div>
 </template>
